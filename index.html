@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-skin="default">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Chibi Habit Tracker</title>
+
+  <!-- Styles & Manifest -->
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- SortableJS for drag-and-drop -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <h1 class="app-title">🌸 Chibi Habit Tracker</h1>
+
+  <header>
+    <button id="notify-perm">🔔 Enable Reminders</button>
+
+    <!-- Reminder time UI -->
+    <label for="reminder-time">⏰ Remind me at:</label>
+    <input type="time" id="reminder-time"/>
+    <button id="add-reminder">Add Time</button>
+    <div id="times-list"></div>
+
+    <button id="show-stats">📊 Show Stats</button>
+    <button id="theme-toggle">🌓 Toggle Theme</button>
+    <select id="skin-select">
+      <option value="default">Classic</option>
+      <option value="pastel">Pastel Pack</option>
+      <option value="neon">Neon Pack</option>
+    </select>
+  </header>
+
+  <main>
+    <!-- New habit + category -->
+    <section id="new-habit">
+      <input type="text" id="habit-input" placeholder="Add a new habit…" />
+      <select id="category-input">
+        <option value="Health">Health</option>
+        <option value="Work">Work</option>
+        <option value="Learning">Learning</option>
+        <option value="Other">Other</option>
+      </select>
+      <button id="add-btn">+</button>
+    </section>
+
+    <!-- Filter -->
+    <section id="filter-section">
+      <label for="filter-select">Filter by:</label>
+      <select id="filter-select">
+        <option value="All">All</option>
+        <option value="Health">Health</option>
+        <option value="Work">Work</option>
+        <option value="Learning">Learning</option>
+        <option value="Other">Other</option>
+      </select>
+    </section>
+
+    <!-- Habit list (sortable) -->
+    <ul id="habit-list"></ul>
+
+    <!-- Chibi -->
+    <div id="chibi-container">
+      <img id="chibi" src="assets/default/chibi-0.jpeg" alt="Chibi growth stage"/>
+      <p id="growth-msg">Let’s grow together!</p>
+    </div>
+
+    <!-- Stats -->
+    <section id="stats" class="hidden">
+      <h2>Your Weekly Completions</h2>
+      <canvas id="stats-chart" width="300" height="200"></canvas>
+      <button id="close-stats">Close</button>
+    </section>
+  </main>
+
+  <!-- Our script -->
+  <script src="script.js"></script>
+</body>
+</html>

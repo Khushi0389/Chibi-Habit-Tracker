@@ -1,2 +1,11 @@
-"dist/"      
-"node_modules/" 
+# dependencies
+/node_modules/
+# build output
+/dist
+/build
+/dist/*.exe
+/dist/win-unpacked/*.exe
+/dist/
+
+
+"/dist/" 

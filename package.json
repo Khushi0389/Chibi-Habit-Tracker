@@ -1,0 +1,39 @@
+{
+  "name": "chibi-habit-tracker",
+  "version": "1.0.0",
+  "description": "A cute habit-tracker wrapped in Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64",
+    "release-build": "cross-env NODE_ENV=production electron-builder --win --x64 --publish never"
+  },
+  "build": {
+    "appId": "com.yourname.chibihabit",
+    "productName": "Chibi Habit Tracker",
+    "files": [
+      "**/*",
+      "!node_modules/**/{README.md,*.map,*.ts}"
+    ],
+    "win": {
+      "icon": "desk.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^37.2.1",
+    "electron-builder": "^26.0.12"
+  }
+}
