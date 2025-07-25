@@ -12,7 +12,7 @@ A delightful desktop habit‐tracker built with **Electron**, featuring cute chi
 Because our installer is larger than GitHub’s release‐asset limits, you can grab the latest Windows installer from Google Drive:
 
 - **Installer (v1.0.0)**  
-  👉 [Download Chibi Habit Tracker Setup 1.0.0] https://drive.google.com/file/d/131DSuQHliujrfsxP1g1yLtfxL_lQ5No0/view?usp=drive_link
+  👉 [Download Chibi Habit Tracker Setup 1.0.0] (https://drive.google.com/file/d/131DSuQHliujrfsxP1g1yLtfxL_lQ5No0/view?usp=drive_link)
 
 ---
 
