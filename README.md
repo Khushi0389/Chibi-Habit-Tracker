@@ -68,5 +68,5 @@ npm start
 
 - Commit your changes (git commit -m "feat: your idea")
 
-- Push and open a pull request
+- Push and open a pull request.
 
